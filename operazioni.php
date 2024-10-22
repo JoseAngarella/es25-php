@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php
@@ -12,7 +13,13 @@
         if(empty($num1) || empty($num2)){
             echo "<p>Errore: almeno uno dei due numeri è vuoto</p> <br> <a href='esercizio25.html'>inserisci di nuovo</a>";
         }else{
-            echo "<ol><li>$num1</li><li>$num1</li></ol>";
+            echo "<ol><li>$num1</li><li>$num2</li></ol>";
+            echo "<table><tr><th>operazione</th><th>risultato</th></tr>
+            <tr><td>".$num1 ." + ". $num2."</td><td>". $num1 + $num2."</td></tr>
+            <tr><td>".$num1 ." - ". $num2."</td><td>". $num1 - $num2."</td></tr>
+            <tr><td>".$num1 ." * ". $num2."</td><td>". $num1 * $num2."</td></tr>
+            <tr><td>".$num1 ." / ". $num2."</td><td>". $num1 / $num2."</td></tr>
+            </table>";
         }
 
     ?>
