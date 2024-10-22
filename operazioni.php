@@ -10,15 +10,15 @@
     <?php
         $num1= $_GET['num1'];
         $num2= $_GET['num2'];
-        if(empty($num1) || empty($num2)){
-            echo "<p>Errore: almeno uno dei due numeri è vuoto</p> <br> <a href='esercizio25.html'>inserisci di nuovo</a>";
+        if(empty($num1) || empty($num2) || $num2==0){
+            echo "<p>Errore: almeno uno dei due numeri è vuoto oppure il secondo è 0</p> <br> <a href='esercizio25.html'>inserisci di nuovo</a>";
         }else{
             echo "<ol><li>$num1</li><li>$num2</li></ol>";
             echo "<table><tr><th>operazione</th><th>risultato</th></tr>
             <tr><td>".$num1 ." + ". $num2."</td><td>". $num1 + $num2."</td></tr>
             <tr><td>".$num1 ." - ". $num2."</td><td>". $num1 - $num2."</td></tr>
             <tr><td>".$num1 ." * ". $num2."</td><td>". $num1 * $num2."</td></tr>
-            <tr><td>".$num1 ." / ". $num2."</td><td>". $num1 / $num2."</td></tr>
+            <tr><td>".$num1 ." / ". $num2."</td><td>". number_format($num1 / $num2,2)."</td></tr>
             </table>";
         }
 
